@@ -1,0 +1,3 @@
+Speed Improvement: -1271.77%
+Size Reduction: 12.69%
+Minor accuracy drop due to pruning and FP16

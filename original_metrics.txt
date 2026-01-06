@@ -1,0 +1,4 @@
+Inference Time (ms): 102.00
+Model Size (MB): 20.46
+Memory Usage (MB): 321.88
+Accuracy: ~77% (ImageNet)

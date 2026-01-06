@@ -1,0 +1,4 @@
+Inference Time (ms): 1399.26
+Model Size (MB): 17.86
+Memory Usage (MB): 332.43
+Accuracy: ~76%
