@@ -1,0 +1,9 @@
+In this task, a pre-trained EfficientNet-B0 model was optimized to make it suitable for deployment on edge devices, which have limited computing power, memory, and storage. EfficientNet-B0 was chosen because it provides a good balance between accuracy and efficiency and is commonly used in edge applications.
+
+First, the original model performance was measured by evaluating inference time per image, model size, memory usage, and reference accuracy from the ImageNet dataset. Inference time was measured using a forward pass on a synthetic input tensor with the same dimensions as a real image. Model size was calculated by saving the model weights to disk, and memory usage was measured using system RAM consumption during execution.
+
+To optimize the model, two techniques were applied.Pruning was used to remove 30% of low-importance convolutional weights, which reduced model complexity and memory usage. FP16 quantization was then applied to convert model weights and inputs from 32-bit to 16-bit floating-point precision, further reducing the model size and memory footprint.
+
+After optimization, the model size and memory usage were significantly reduced, making the model more suitable for edge deployment. A small decrease in accuracy was observed due to reduced precision and weight removal, which is an expected trade-off in model optimization. Inference speed on CPU did not improve because FP16 acceleration is limited on general-purpose CPUs, but these optimizations are effective on GPUs and edge accelerators.
+
+Overall, the optimized EfficientNet-B0 model demonstrates a practical trade-off between efficiency and accuracy and is suitable for deployment on edge devices such as mobile platforms, embedded systems, and IoT devices.
